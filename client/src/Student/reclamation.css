@@ -1,0 +1,281 @@
+.reclamation-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    color: #3a7bd5;
+    margin-bottom: 0.5rem;
+  }
+  
+  .page-description {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  /* Formulaire de réclamation */
+  .reclamation-form-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .reclamation-form-container h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .reclamation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .submit-button {
+    background-color: #3a7bd5;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    align-self: flex-end;
+  }
+  
+  .submit-button:hover {
+    background-color: #2a5db2;
+    transform: translateY(-2px);
+  }
+  
+  .submit-button:disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .success-message {
+    background-color: #dcf5e7;
+    color: #0d9f4f;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  /* Liste des réclamations */
+  .reclamations-list {
+    margin-top: 3rem;
+  }
+  
+  .reclamations-list h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .reclamation-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+  
+  .reclamation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .reclamation-header:hover {
+    background-color: #f8fafc;
+  }
+  
+  .reclamation-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .reclamation-icon {
+    color: #f59e0b;
+  }
+  
+  .reclamation-title h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  .reclamation-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .status-pending {
+    background-color: #f0f0f0;
+    color: #666;
+  }
+  
+  .status-processing {
+    background-color: #e6f7ff;
+    color: #0284c7;
+  }
+  
+  .status-resolved {
+    background-color: #dcf5e7;
+    color: #0d9f4f;
+  }
+  
+  .status-rejected {
+    background-color: #fde8e8;
+    color: #e53e3e;
+  }
+  
+  .reclamation-date {
+    font-size: 0.85rem;
+    color: #64748b;
+  }
+  
+  .toggle-icon {
+    color: #64748b;
+  }
+  
+  .reclamation-details {
+    padding: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+  }
+  
+  .reclamation-info {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .info-label {
+    font-weight: 500;
+    color: #64748b;
+    min-width: 80px;
+  }
+  
+  .info-value {
+    color: #333;
+  }
+  
+  .reclamation-description {
+    margin-bottom: 1.5rem;
+  }
+  
+  .description-label {
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+  }
+  
+  .description-content {
+    color: #333;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
+  
+  .reclamation-response {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    border-left: 3px solid #3a7bd5;
+  }
+  
+  .response-label {
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+  }
+  
+  .response-content {
+    color: #333;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
+  
+  .no-reclamations {
+    background-color: #f8fafc;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    color: #64748b;
+  }
+  
+  .loading,
+  .error {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+  }
+  
+  .error {
+    color: #e53e3e;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .reclamation-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+  
+    .reclamation-meta {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .submit-button {
+      align-self: stretch;
+    }
+  }
+  
+  

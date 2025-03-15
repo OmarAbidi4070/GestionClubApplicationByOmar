@@ -1,0 +1,218 @@
+.inscription-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    overflow: hidden;
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  .inscription-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .header-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #007bff, #00a6ff);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+  }
+  
+  .header-icon i {
+    font-size: 32px;
+    color: white;
+  }
+  
+  .inscription-header h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+  
+  .inscription-header p {
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .select-poste {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.8rem;
+    border: 2px solid #e1e8ed;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #f8fafc;
+    appearance: none;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .select-poste:focus {
+    border-color: #007bff;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+    outline: none;
+  }
+  
+  .date-input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.8rem;
+    border: 2px solid #e1e8ed;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #f8fafc;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .date-input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+    cursor: pointer;
+    padding: 5px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .date-input::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+  }
+  
+  .create-account-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #007bff, #00a6ff);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .create-account-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #0082cc);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  }
+  
+  .create-account-btn:active {
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 768px) {
+    .auth-page {
+      padding: 1rem;
+    }
+  
+    .login-container,
+    .inscription-container {
+      padding: 2rem;
+    }
+  
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  
+    .nav-links {
+      gap: 1rem;
+    }
+  
+    .company-name {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar-container {
+      padding: 0 1rem;
+    }
+  
+    .nav-link {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+  
+    .login-container,
+    .inscription-container {
+      padding: 1.5rem;
+    }
+  
+    .avatar-container {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .header-icon {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .header-icon i {
+      font-size: 24px;
+    }
+  }
+
+.select-etablissement {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.8rem;
+  border: 2px solid #e1e8ed;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #f8fafc;
+  appearance: none; 
+  cursor: pointer;
+  color: #333;
+}
+
+.select-etablissement:focus {
+  border-color: #007bff;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+  outline: none;
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon i {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #666;
+  pointer-events: none;
+}
+
+.select-etablissement:hover {
+  border-color: #007bff;
+}
+
+.select-etablissement:active {
+  transform: scale(0.98);
+}

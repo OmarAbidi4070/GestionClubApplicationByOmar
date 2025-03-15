@@ -1,0 +1,211 @@
+.temoignage-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    color: #3a7bd5;
+    margin-bottom: 0.5rem;
+  }
+  
+  .page-description {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  /* Formulaire de témoignage */
+  .temoignage-form-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .temoignage-form-container h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .temoignage-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 1rem;
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .stars-container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .star {
+    color: #e2e8f0;
+    stroke-width: 1.5;
+    transition: all 0.2s ease;
+  }
+  
+  .star.filled {
+    color: #f59e0b;
+    fill: #f59e0b;
+  }
+  
+  .star.interactive {
+    cursor: pointer;
+  }
+  
+  .star.interactive:hover {
+    transform: scale(1.1);
+  }
+  
+  .submit-button {
+    background-color: #3a7bd5;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    align-self: flex-end;
+  }
+  
+  .submit-button:hover {
+    background-color: #2a5db2;
+    transform: translateY(-2px);
+  }
+  
+  .submit-button:disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .success-message {
+    background-color: #dcf5e7;
+    color: #0d9f4f;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  /* Liste des témoignages */
+  .temoignages-list {
+    margin-top: 3rem;
+  }
+  
+  .temoignages-list h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .temoignage-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .temoignage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+  }
+  
+  .user-info h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  .temoignage-date {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin: 0.25rem 0 0 0;
+  }
+  
+  .temoignage-content {
+    color: #4a5568;
+    line-height: 1.6;
+  }
+  
+  .no-temoignages {
+    background-color: #f8fafc;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    color: #64748b;
+  }
+  
+  .loading,
+  .error {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+  }
+  
+  .error {
+    color: #e53e3e;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .temoignage-header {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .temoignage-rating {
+      align-self: flex-start;
+    }
+  
+    .submit-button {
+      align-self: stretch;
+    }
+  }
+  
+  

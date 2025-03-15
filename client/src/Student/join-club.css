@@ -1,0 +1,365 @@
+.join-club-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    color: #3a7bd5;
+    margin-bottom: 0.5rem;
+  }
+  
+  .page-description {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  /* Section des demandes de l'utilisateur */
+  .mes-demandes-section {
+    margin-bottom: 2rem;
+  }
+  
+  .mes-demandes-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .demandes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .demande-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .demande-club-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .demande-club-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .demande-club-logo-placeholder {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3a7bd5;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .demande-status {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .status-en_attente {
+    background-color: #f0f0f0;
+    color: #666;
+  }
+  
+  .status-acceptée {
+    background-color: #dcf5e7;
+    color: #0d9f4f;
+  }
+  
+  .status-refusée {
+    background-color: #fde8e8;
+    color: #e53e3e;
+  }
+  
+  .demande-date {
+    font-size: 0.75rem;
+    color: #666;
+  }
+  
+  /* Tableau des clubs */
+  .clubs-table-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .clubs-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .clubs-table th {
+    background-color: #f5f7fa;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .clubs-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: middle;
+  }
+  
+  .clubs-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .clubs-table tr:hover {
+    background-color: #f9fafb;
+  }
+  
+  .club-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .club-logo-placeholder {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #3a7bd5;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .club-description {
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .join-button {
+    background-color: #3a7bd5;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    min-width: 120px;
+  }
+  
+  .join-button:hover {
+    background-color: #2a5db2;
+    transform: translateY(-2px);
+  }
+  
+  .join-button.disabled {
+    background-color: #e2e8f0;
+    color: #666;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .no-clubs {
+    text-align: center;
+    color: #666;
+    padding: 2rem;
+  }
+  
+  .loading,
+  .error {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+  }
+  
+  .error {
+    color: #e53e3e;
+  }
+  
+  /* Modal styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #3a7bd5;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s ease;
+  }
+  
+  .close-button:hover {
+    color: #e53e3e;
+  }
+  
+  /* Form styles */
+  .join-form {
+    padding: 1.5rem;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group {
+    flex: 1;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .checkbox-group input {
+    width: auto;
+    margin-top: 0.25rem;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .cancel-button {
+    background-color: #e2e8f0;
+    color: #333;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  .submit-button {
+    background-color: #3a7bd5;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  .cancel-button:hover {
+    background-color: #cbd5e0;
+  }
+  
+  .submit-button:hover {
+    background-color: #2a5db2;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    .clubs-table {
+      display: block;
+      overflow-x: auto;
+    }
+  
+    .modal-content {
+      width: 95%;
+    }
+  
+    .demandes-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  
